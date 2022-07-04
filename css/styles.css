@@ -180,7 +180,7 @@ ul {
   color: var(--accent-color);
 }
 
-.mail-icon {
+.mail .icon {
   width: 16px;
   height: 12px;
   margin-right: 10px;
@@ -188,7 +188,7 @@ ul {
   fill: var(--primary-text-color);
 }
 
-.tel-icon {
+.tel .icon {
   width: 10px;
   height: 16px;
   margin-right: 10px;
@@ -196,13 +196,13 @@ ul {
   fill: var(--primary-text-color);
 }
 
-.mail:hover .mail-icon,
-.mail:focus .mail-icon {
+.mail:hover .icon,
+.mail:focus .icon {
   fill: var(--accent-color);
 }
 
-.tel:hover .tel-icon,
-.tel:focus .tel-icon {
+.tel:hover .icon,
+.tel:focus .icon {
   fill: var(--accent-color);
 }
 /* Main */
@@ -214,6 +214,8 @@ ul {
   height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
   text-align: center;
 
@@ -225,7 +227,7 @@ ul {
     ),
     url("../images/hero-img.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 50%;
   background-size: cover;
 
   border: 1px solid #000000;
@@ -302,16 +304,20 @@ ul {
 }
 
 .feature-icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height: 120px;
+  /* padding-top: 25px;
+  padding-bottom: 25px; */
   margin-bottom: 30px;
   border-radius: 4px;
 
   text-align: center;
   background-color: #f5f4fa;
 
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 
 .feature-icon {
@@ -454,19 +460,8 @@ ul {
 
 .client-list .client {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: calc((100% - 150px) / 6);
   height: 92px;
-  /* padding: 16px 32px; */
-
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-}
-
-.client-list .client:hover,
-.client-list .client:focus {
-  border-color: var(--accent-color);
 }
 
 .client-list .client + .client {
@@ -474,8 +469,20 @@ ul {
 }
 
 .client-list .client-link {
-  display: inline-flex;
-  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: calc((100% - 150px) / 6); */
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-list .client-link:hover,
+.client-list .client-link:focus {
+  border-color: var(--accent-color);
 }
 
 .client-list .client-icon {
